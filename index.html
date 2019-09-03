@@ -1,0 +1,228 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+	<head>
+			<meta charset="utf-8">
+       		<link rel="stylesheet" href="slick/slick/slick.css">
+       		<link rel="stylesheet" href="slick/slick/slick-theme.css">
+       
+       		<style>
+				body{
+					font-family: Arial, Helvetica, sans-serif;
+					margin: 0;
+				}
+
+				#title{
+					font-weight: bold;
+					border-bottom: solid gray 1px;
+       				font-size: 30px;
+				}
+
+				#container{
+					padding: 0em 10em 8em 3em;
+				}
+
+       			.slider{
+       				height: 200px;
+					width: 98%;
+       			}
+       			
+       			.topics{
+					background-color: white;
+       			}
+
+				.topics a{
+					text-decoration: none;
+				}
+
+       			.topics a:link{
+       				color: black;
+       			}
+       			
+       			.topics a:visited{
+       				color: black;
+       			}
+       			
+       			.topic{
+					padding: 10px;
+					border: solid #000000 1px;
+					vertical-align: top;
+       				display: inline-block;
+       				width:200px;
+       				height:250px;
+       				margin: 0em 1em 3em 1em;
+					box-shadow: 2px 2px 0px 0px black;
+					transition: .5s;
+       			}
+
+				.topic:hover{
+					background-color: #eeeeee;
+					box-shadow: 0px 0px 0px 0px black;
+					transform: scale(1.1);
+					animation: topic-anim .5s ease;
+				}
+
+				@keyframes topic-anim{
+					0%{ transform: scale(1); }
+					50%{ transform: scale(1.2) }
+					100%{ transform: scale(1.1); }
+				}
+       			
+				#img{
+					position: relative;
+					border: solid black 2px;
+				}
+
+       			.topic_img1{
+       				width: 200px;
+       				height: 140px;
+       				background-color: orange;
+       			}
+
+				.topic_img2{
+					width: 200px;
+					height: 140px;
+					background-color: aqua;
+				}
+
+				.topic_img3{
+					width: 200px;
+					height: 140px;
+					background-color: gray;
+				}
+       			
+       			.whats_new{
+					background-color: white;
+       			}
+       			
+       			.whats_new li{
+       				margin: 1em 0em 2em 0em;
+       				list-style: none;
+       				border-bottom: dotted 1px gray;
+       			}
+       			
+       			.sns{
+					background-color: white;
+       			}
+       			
+       			.sns .twitter_button{
+					position: relative;
+					font-size: 1.4em;
+					font-weight: bold;
+					padding: 10px 30px;
+					background-color: #0074bf;
+					color: #fff;
+					border-style: none;
+					box-shadow: 0px 5px 1px 0px blue;
+					top: 0px;
+					transition: .1s;
+       			}
+
+				.sns .twitter_button:hover{
+					top:5px;
+					box-shadow: 0px 0px 1px 0px blue;
+				}
+       		</style>
+       
+	       	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	       	<script type="text/javascript" src="../slick/slick/slick.min.js"></script>
+	       	<script>
+	        	$(function() {
+	        		$('.slider').slick({
+						autoplay: true
+	               	});
+	           	});
+	       	</script>
+	</head>
+	
+	<body>
+		<div>
+			<div class="slider">
+				<div><p>スライド1</p></div>
+				<div><p>スライド2</p></div>
+				<div><p>スライド3</p></div>
+			</div>
+		</div>
+
+		<h2>※このページは完成していません※</h2>
+
+		<div class="topics">
+			<div id="container">
+				<p id="title">トピック</p>
+	
+				<a href="pastproject_files/pastproject.html">
+					<div class="topic">
+						<div class="topic_img1" id="img">
+						</div>
+						<h4>制作物の紹介</h4>
+						<h6>今まで制作したものを紹介します。</h6>
+					</div>
+				</a>
+	
+				<a href="https://mugitea.hatenablog.jp/" target="_blank">
+					<div class="topic">
+						<div class="topic_img2" id="img">
+						</div>
+						<h4>はてなブログ</h4>
+						<h6>やったことなどを備忘録的に記録します(別タブで開きます)。</h6>
+					</div>
+				</a>
+	
+				<a href="https://github.com/mugitea7" target="_blank">
+					<div class="topic">
+						<div class="topic_img3" id="img">
+						</div>
+						<h4>GitHub</h4>
+						<h6>制作したものなどを置いています(別タブで開きます)。</h6>
+					</div>
+				</a>
+
+				<a href="https://github.com/mugitea7" target="_blank">
+					<div class="topic">
+						<div class="topic_img3" id="img">
+						</div>
+						<h4>GitHub</h4>
+						<h6>制作したものなどを置いています(別タブで開きます)。</h6>
+					</div>
+				</a>
+
+				<a href="https://github.com/mugitea7" target="_blank">
+					<div class="topic">
+						<div class="topic_img3" id="img">
+						</div>
+						<h4>GitHub</h4>
+						<h6>制作したものなどを置いています(別タブで開きます)。</h6>
+					</div>
+				</a>
+
+				<a href="https://github.com/mugitea7" target="_blank">
+					<div class="topic">
+						<div class="topic_img3" id="img">
+						</div>
+						<h4>GitHub</h4>
+						<h6>制作したものなどを置いています(別タブで開きます)。</h6>
+					</div>
+				</a>
+			</div>
+		</div>
+
+		<div class="whats_new">
+			<div id="container">
+				<p id="title">更新履歴</p>
+				<ul>
+					<li><time datetime="2019-09-04">2019/09/04</time>    試験的にtwitterのリンクから移動できるようにしました。</li>
+					<li><time datetime="2019-09-03">2019/09/03</time>    トピックを追加しました。</li>
+					<li><time datetime="2019-08-20">2019/08/20</time>    制作物の紹介のページを更新しました。</li>
+					<li><time datetime="2019-08-16">2019/08/16</time>    ページを作成しました。</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="sns">
+			<div id="container">
+				<p id="title">SNS</p>
+				<button type="button" class="twitter_button" onClick="window.open('https://twitter.com/tea59595959','_blank')">Twitter</button>
+			</div>
+		</div>
+
+	</body>
+</html>
