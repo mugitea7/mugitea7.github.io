@@ -1,230 +1,272 @@
 ﻿<!DOCTYPE html>
-<html lang="ja">
-	<head>
-			<meta charset="utf-8">
-			<meta lang="ja">
-			
-       		<link rel="stylesheet" href="slick/slick/slick.css">
-       		<link rel="stylesheet" href="slick/slick/slick-theme.css">
-       
-       		<style>
-				body{
-					font-family: Arial, Helvetica, sans-serif;
-					margin: 0;
-				}
+<html>
+    <head>
+        <meta lang="ja">
+        <meta charset="utf-8">
 
-				#title{
-					font-weight: bold;
-					border-bottom: solid gray 1px;
-       				font-size: 30px;
-				}
+        <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
 
-				#container{
-					padding: 0em 10em 8em 3em;
-				}
+        <style>
+            body{
+                background-color: black;
+                color: #ffffff;
+                margin: 0;
+            }
 
-       			.slider{
-       				height: 200px;
-					width: 98%;
-       			}
-       			
-       			.topics{
-					background-color: white;
-       			}
+            .background {
+                position:absolute;
+                display: block;
+                top: 0;
+                left: 0;
+            }
+  
 
-				.topics a{
-					text-decoration: none;
-				}
+            .fade{
+                opacity: 0;
+                animation: fade 4s ease;
+            }
 
-       			.topics a:link{
-       				color: black;
-       			}
-       			
-       			.topics a:visited{
-       				color: black;
-       			}
-       			
-       			.topic{
-					padding: 10px;
-					border: solid #000000 1px;
-					vertical-align: top;
-       				display: inline-block;
-       				width:200px;
-       				height:250px;
-       				margin: 0em 1em 3em 1em;
-					box-shadow: 2px 2px 0px 0px black;
-					transition: .5s;
-       			}
+            .max_window p{
+                font-size: 100px;
+                font-weight: bold;
+            }
 
-				.topic:hover{
-					background-color: #eeeeee;
-					box-shadow: 0px 0px 0px 0px black;
-					transform: scale(1.1);
-					animation: topic-anim .5s ease;
-				}
+            @keyframes fade{
+                0%{ opacity: 0; transform: translateY(50px); }
+                50%{ opacity: 1; transform: translateY(0px); }
+                70%{ opacity: 1; }
+                100%{ opacity: 0; }
+            }
 
-				@keyframes topic-anim{
-					0%{ transform: scale(1); }
-					50%{ transform: scale(1.2) }
-					100%{ transform: scale(1.1); }
-				}
-       			
-				#img{
-					position: relative;
-					border: solid black 2px;
-				}
+            .max_window{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw;
+            }
 
-       			.topic_img1{
-       				width: 200px;
-       				height: 140px;
-       				background-color: orange;
-       			}
+            .topics{
+                position: absolute;
+                align-items: center;
+                justify-content: center;
+                top: 0;
+                width: 100vw;
+                height: 100vh;
+                animation: anim 4.5s ease;
+            }
 
-				.topic_img2{
-					width: 200px;
-					height: 140px;
-					background-color: aqua;
-				}
+            .title{
+                font-family: 'OCRB';
+            }
 
-				.topic_img3{
-					width: 200px;
-					height: 140px;
-					background-color: gray;
-				}
-       			
-       			.whats_new{
-					background-color: white;
-       			}
-       			
-       			.whats_new li{
-       				margin: 1em 0em 2em 0em;
-       				list-style: none;
-       				border-bottom: dotted 1px gray;
-       			}
-       			
-       			.sns{
-					background-color: white;
-       			}
-       			
-       			.sns .twitter_button{
-					position: relative;
-					font-size: 1.4em;
-					font-weight: bold;
-					padding: 10px 30px;
-					background-color: #0074bf;
-					color: #fff;
-					border-style: none;
-					box-shadow: 0px 5px 1px 0px blue;
-					top: 0px;
-					transition: .1s;
-       			}
+            .tmp{
+                font-family: 'OCRB';
+                display: flex;
+                position: absolute;
+                align-items: center;
+                justify-content: center;
+                top: 0;
+                width: 100vw;
+                height: 100vh;
+            }
 
-				.sns .twitter_button:hover{
-					top:5px;
-					box-shadow: 0px 0px 1px 0px blue;
-				}
-       		</style>
-       
-	       	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	       	<script type="text/javascript" src="slick/slick/slick.min.js"></script>
-	       	<script>
-	        	$(function() {
-	        		$('.slider').slick({
-						autoplay: true
-	               	});
-	           	});
-	       	</script>
-	</head>
-	
-	<body>
-		<div>
-			<div class="slider">
-				<div><p>スライド1</p></div>
-				<div><p>スライド2</p></div>
-				<div><p>スライド3</p></div>
-			</div>
-		</div>
+            .topic{
+                background-color: black;
+                margin: 5px 40px 5px 40px;
+                width: 300px;
+                height: 450px;
+                border: #ffffff solid 1px;
+                text-align: center;
+                transition: .5s;
+            }
 
-		<h2>※このページは完成していません※</h2>
+            .tmp:hover > .topic{
+                transform: scale(0.9);
+            }
 
-		<div class="topics">
-			<div id="container">
-				<p id="title">トピック</p>
-	
-				<a href="pastproject_files/pastproject.html">
-					<div class="topic">
-						<div class="topic_img1" id="img">
-						</div>
-						<h4>制作物の紹介</h4>
-						<h6>今まで制作したものを紹介します。</h6>
-					</div>
-				</a>
-	
-				<a href="https://mugitea.hatenablog.jp/" target="_blank">
-					<div class="topic">
-						<div class="topic_img2" id="img">
-						</div>
-						<h4>はてなブログ</h4>
-						<h6>やったことなどを備忘録的に記録します(別タブで開きます)。</h6>
-					</div>
-				</a>
-	
-				<a href="https://github.com/mugitea7" target="_blank">
-					<div class="topic">
-						<div class="topic_img3" id="img">
-						</div>
-						<h4>GitHub</h4>
-						<h6>制作したものなどを置いています(別タブで開きます)。</h6>
-					</div>
-				</a>
+            .tmp > .topic:hover{
+                transform: scale(1.1);
+            }
 
-				<a href="https://github.com/mugitea7" target="_blank">
-					<div class="topic">
-						<div class="topic_img3" id="img">
-						</div>
-						<h4>GitHub</h4>
-						<h6>制作したものなどを置いています(別タブで開きます)。</h6>
-					</div>
-				</a>
+            .topic:hover{
+                background-color: white;
+                color: black;
+            }
 
-				<a href="https://github.com/mugitea7" target="_blank">
-					<div class="topic">
-						<div class="topic_img3" id="img">
-						</div>
-						<h4>GitHub</h4>
-						<h6>制作したものなどを置いています(別タブで開きます)。</h6>
-					</div>
-				</a>
 
-				<a href="https://github.com/mugitea7" target="_blank">
-					<div class="topic">
-						<div class="topic_img3" id="img">
-						</div>
-						<h4>GitHub</h4>
-						<h6>制作したものなどを置いています(別タブで開きます)。</h6>
-					</div>
-				</a>
-			</div>
-		</div>
+            @keyframes anim{
+                0%{ transform: scale(0); }
+                80%{ transform: scale(0); }
+                100%{ transform: scale(1); }
+            }
 
-		<div class="whats_new">
-			<div id="container">
-				<p id="title">更新履歴</p>
-				<ul>
-					<li><time datetime="2019-09-04">2019/09/04</time>    試験的にtwitterのリンクから移動できるようにしました。</li>
-					<li><time datetime="2019-09-03">2019/09/03</time>    トピックを追加しました。</li>
-					<li><time datetime="2019-08-20">2019/08/20</time>    制作物の紹介のページを更新しました。</li>
-					<li><time datetime="2019-08-16">2019/08/16</time>    ページを作成しました。</li>
-				</ul>
-			</div>
-		</div>
+            .topics > .title p{
+                margin: 20px 0 0 0;
+                text-align: center;
+                font-size: 50px;
+                font-weight: bolder;
+            }
 
-		<div class="sns">
-			<div id="container">
-				<p id="title">SNS</p>
-				<button type="button" class="twitter_button" onClick="window.open('https://twitter.com/tea59595959','_blank')">Twitter</button>
-			</div>
-		</div>
+            .topic p{
+                font-size: 25px;
+                font-weight: bolder;
+            }
 
-	</body>
+            .topic button{
+                border: none;
+                cursor: pointer;
+                width: 250px;
+                height: 70px;
+                font-weight: bold;
+                font-size: 30px;
+            }
+
+            .center{
+                text-align: center;
+            }
+
+            .topics{
+                visibility: hidden;
+            }
+
+            .topic,.title{
+                visibility: visible;
+            }
+
+            button{
+                font-family: 'Terminal';
+            }
+
+            #twitter{
+                border: solid white 1px;
+                color: white;
+                background-color: #00a6ce;
+                transition: .5s;
+            }
+
+            #twitter:hover{
+                border:solid #00a6ce 1px;
+                background-color: white;
+                color: #00a6ce;
+            }
+
+            #unityroom{
+                border: solid white 1px;
+                color: white;
+                background-color: #4632ff;
+                transition: .5s;
+            }
+
+            #unityroom:hover{
+                border:solid #4632ff 1px;
+                background-color: white;
+                color: #4632ff;
+            }
+
+            #github{
+                border:solid #e7e7e7 1px;
+                color: #e7e7e7;
+                background-color: black;
+                transition: .5s;
+            }
+
+            #github:hover{
+                border:solid black 1px;
+                color: black;
+                background-color: white;
+            }
+
+            #blog{
+                border: solid white 1px;
+                color: white;
+                background-color: #f78850;
+                transition: .5s;
+            }
+            #blog:hover{
+                border:solid #f78850 1px;
+                color: #f78850;
+                background-color: white;
+            }
+
+            #unity{
+                border: solid white 1px;
+                color: white;
+                background-color: #0e1015;
+                transition: .5s;
+            }
+
+            #unity:hover{
+                border:solid #0e1015 1px;
+                color: #0e1015;
+                background-color: white;
+            }
+
+            #blender{
+                border: solid white 1px;
+                color: white;
+                background-color: orange;
+                transition: .5s;
+            }
+
+            #blender:hover{
+                border:solid orange 1px;
+                color: orange;
+                background-color: white;
+            }
+
+        </style>
+
+        <script>
+            window.onload= function() {
+                    var particles = Particles.init({
+                        selector: '.background',
+                        sizeVariations: 10,
+                        color: ['#00bbdd', '#404B69', '#DBEDF3'],
+                        connectParticles: true
+                    });
+            }
+        </script>
+    </head>
+
+    <body>
+        <canvas class="background"></canvas>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
+
+        <div class="max_window">
+            <p class="fade">ようこそ</p>
+        </div>
+
+        <div class="topics">
+            <div class="title">
+                    <p>トピック</p>
+            </div>
+
+            <div class="tmp">
+                <div class="topic">
+                    <p>更新履歴</p>
+                    <p>2019/09/07<br>index.htmlをこっちに置き換えました。</p>
+
+                    <p>2019/09/07<br>ページを作製</p>
+                </div>
+    
+                <div class="topic">
+                    <p>制作物</p>
+                    <p><button type="button" id="unity" onclick="window.open('pastproject_files/pastproject.html')">Unity</button></p>
+                    <p><button type="button" id="blender" onclick="alert('まだ作っていません...')">Blender</button></p>
+                </div>
+    
+                <div class="topic">
+                    <div class="center">
+                        <p>外部リンク</p>
+                        <p><button type="button" id="twitter" onclick="window.open('https://twitter.com/tea59595959')"><i class="fab fa-twitter"></i> Twitter</button></p>
+                        <p><button type="button" id="unityroom" onclick="window.open('https://unityroom.com/users/wkny6ejh5l3qgbdu810c')"><i class="fas fa-gamepad"></i> Unityroom</button></p>
+                        <p><button type="button" id="github" onclick="window.open('https://github.com/mugitea7')"><i class="fab fa-github"></i> Github</button></p>
+                        <p><button type="button" id="blog" onclick="window.open('https://mugitea.hatenablog.jp/')"><i class="fas fa-book"></i> Hatena Blog</button></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+          
+    </body>
 </html>
