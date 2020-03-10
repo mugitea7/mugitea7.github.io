@@ -105,7 +105,6 @@ $sp: 0px;     //スマホ
     }
     
     &__type{
-
         position: relative;
         transform: translateY(-50%);
 
@@ -149,7 +148,7 @@ $sp: 0px;     //スマホ
 
         @include break($sp){
             top: 60%;
-            left: 10%;
+            left: -3px;
             transform: translateY(-60%);
             font-size: 13;
         }
