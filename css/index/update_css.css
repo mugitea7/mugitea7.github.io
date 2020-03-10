@@ -1,4 +1,3 @@
-@charset "UTF-8";
 .update {
   position: relative;
   left: 50%;
@@ -243,24 +242,20 @@
 .update__text--notice {
   color: white;
   font-weight: normal;
-  font-family: '游ゴシック';
 }
 
 .update__text--unityroom {
   color: white;
   font-weight: normal;
-  font-family: '游ゴシック';
 }
 
 .update__text--date {
   color: #333333;
   font-weight: bolder;
-  font-family: Arial;
 }
 
 .update__text--body {
   color: #333333;
   font-weight: bolder;
-  font-family: '游ゴシック';
 }
 /*# sourceMappingURL=update_css.css.map */
