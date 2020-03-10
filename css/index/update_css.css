@@ -164,7 +164,7 @@
 @media (min-width: 0px) {
   .update__date {
     top: 60%;
-    left: -3px;
+    left: -15px;
     -webkit-transform: translateY(-60%);
             transform: translateY(-60%);
     font-size: 13;

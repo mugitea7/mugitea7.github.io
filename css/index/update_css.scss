@@ -148,7 +148,7 @@ $sp: 0px;     //スマホ
 
         @include break($sp){
             top: 60%;
-            left: -3px;
+            left: -15px;
             transform: translateY(-60%);
             font-size: 13;
         }
