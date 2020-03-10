@@ -1,0 +1,165 @@
+.links {
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 90%;
+  margin: 50 0 100 0;
+}
+
+.links__head {
+  position: relative;
+}
+
+.links__head ::before {
+  position: absolute;
+  content: "";
+  background: #888888;
+  width: 100%;
+  height: 3px;
+  bottom: -3;
+}
+
+.links__head ::after {
+  position: absolute;
+  content: "";
+  background: red;
+  width: 200px;
+  height: 3px;
+  bottom: -3;
+  left: 0;
+}
+
+.links__content {
+  position: relative;
+  margin: 20 0 0 0;
+}
+
+@media screen and (min-width: 0px) {
+  .links__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .links__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .links__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.links__content button {
+  width: 150;
+  height: 75;
+  margin: 10;
+  font-family: 'Terminal';
+  cursor: pointer;
+}
+
+@media screen and (min-width: 0px) {
+  .links__content button {
+    width: 140;
+    height: 70;
+    font-size: large;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .links__content button {
+    width: 150;
+    height: 75;
+    font-size: large;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .links__content button {
+    width: 150;
+    height: 75;
+    font-size: large;
+  }
+}
+
+#twitter {
+  border: solid #00a6ce 1px;
+  color: white;
+  background-color: #00a6ce;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+#twitter:hover {
+  border: solid #00a6ce 1px;
+  background-color: white;
+  color: #00a6ce;
+}
+
+#unityroom {
+  border: solid #335bdd 1px;
+  color: white;
+  background-color: #335bdd;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+#unityroom:hover {
+  border: solid #335bdd 1px;
+  background-color: white;
+  color: #335bdd;
+}
+
+#github {
+  border: solid black 1px;
+  color: #e7e7e7;
+  background-color: black;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+#github:hover {
+  border: solid black 1px;
+  color: black;
+  background-color: white;
+}
+
+#blog {
+  border: solid #f78850 1px;
+  color: white;
+  background-color: #f78850;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+#blog:hover {
+  border: solid #f78850 1px;
+  color: #f78850;
+  background-color: white;
+}
+
+#unity {
+  border: solid #0e1015 1px;
+  color: white;
+  background-color: #0e1015;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+#unity:hover {
+  border: solid #0e1015 1px;
+  color: #0e1015;
+  background-color: white;
+}
+/*# sourceMappingURL=links_css.css.map */

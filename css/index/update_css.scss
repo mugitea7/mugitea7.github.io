@@ -1,0 +1,231 @@
+$pc: 1024px;    //PC
+$tab: 600px;    //タブレット
+$sp: 0px;     //スマホ
+
+@mixin break($breakpoint){
+    @media (min-width: ($breakpoint)){
+        @content;
+    }
+}
+
+.update{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 90%;
+    height: auto;
+
+    margin: 0 0 50 0;
+
+    &__head{
+        position: relative;
+
+        ::before{
+            position: absolute;
+            content: "";
+            background: #888888;
+            width: 100%;
+            height: 3px;
+            bottom: -3;	
+        }
+        
+        ::after{
+            position: absolute;
+            content: "";
+            background: red;
+            width: 100px;
+            height: 3px;
+            bottom: -3;
+            left: 0;
+        }
+    }
+
+    a{
+        text-decoration: none;
+    }
+
+    &__underline{
+        width: 90%;
+        border: 1px #666666 dashed;
+    }
+
+    &__lists{
+        position: relative;
+        top: 10;
+        border: 1px #666666 solid;
+        padding: 10 10 10 10;
+        overflow-y: scroll;
+
+        @include break($sp){
+            height: 30em;
+        }
+    
+        @include break($tab){
+            height: 20em;
+        }  
+    
+        @include break($pc){
+            height: 20em;
+        }
+    }
+
+    &__type_and_date{
+
+        @include break($sp){
+            display: block;
+        }
+
+        @include break($tab){
+            display: flex;
+        }  
+
+        @include break($pc){
+            left: 0;
+            display: flex;
+        }
+    }
+
+    &__content{
+
+        @include break($sp){
+            min-height: 60;
+        }
+
+        @include break($tab){
+            min-height: 35;
+        }  
+
+        @include break($pc){
+            min-height: 35;
+        }
+
+        margin: 10 0 10 0;
+        display: flex;
+    }
+    
+    &__type{
+
+        position: relative;
+        transform: translateY(-50%);
+
+        margin: 0 30 0 30;
+        text-align: center;
+        
+        @include break($sp){
+            top: 30%;
+            left: -10%;
+
+            width: 6em;
+            height: 1.5em;
+        }
+
+        @include break($tab){
+            top: 50%;
+            left: 0%;
+            width: 6em;
+            height: 1.5em;
+        }  
+
+        @include break($pc){
+            top: 50%;
+
+            width: 6em;
+            height: 1.5em;
+        }
+
+        &--notice{
+            background-color: #DD3333;
+        }
+
+        &--unityroom{
+            background-color: rgb(51, 91, 221);
+        }
+    }
+
+    &__date{
+        position: relative;
+        margin: 0 60 0 30;
+
+        @include break($sp){
+            top: 60%;
+            left: 10%;
+            transform: translateY(-60%);
+            font-size: 13;
+        }
+
+        @include break($tab){
+            top: 0;
+            left: 0%;
+            transform: translateY(0);
+            font-size: 13;
+        }  
+
+        @include break($pc){
+            top: 0;
+            left: 0%;
+            transform: translateY(0);
+            font-size: 13;
+        }
+    }
+
+    &__body{
+        position: relative;
+        width: 47em;
+
+        @include break($sp){
+            left: -5%;
+        }
+
+        @include break($tab){
+            left: 0;
+        }  
+
+        @include break($pc){
+            left: 0;
+        }
+    }
+    
+    &__text{
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+
+        @include break($sp){
+            font-size: 13;
+        }
+
+        @include break($tab){
+            font-size: 13;
+        }  
+
+        @include break($pc){
+            font-size: 13;
+        }
+
+        &--notice{
+            color: white;
+            font-weight: normal;
+            font-family: '游ゴシック';
+        }
+
+        &--unityroom{
+            color: white;
+            font-weight: normal;
+            font-family: '游ゴシック';
+        }
+
+        &--date{
+            color: #333333;
+            font-weight: bolder;
+            font-family: Arial;
+        }
+
+        &--body{
+            color: #333333;
+            font-weight: bolder;
+            font-family: '游ゴシック';
+        }
+    }
+
+}

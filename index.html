@@ -1,273 +1,270 @@
-﻿<!DOCTYPE html>
-<html>
-    <head>
-        <meta lang="ja">
-        <meta charset="utf-8">
+﻿<html lang="ja">
 
-        <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta charset="UTF-8">
 
-        <style>
-            body{
-                background-color: black;
-                color: #ffffff;
-                margin: 0;
-            }
+	<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/index/links_css.css">
+	<link rel="stylesheet" type="text/css" href="css/index/pickup_css.css">
+	<link rel="stylesheet" type="text/css" href="css/index/update_css.css">
+	<link rel="stylesheet" type="text/css" href="css/index/firstview_css.css">
 
-            .background {
-                position:absolute;
-                display: block;
-                top: 0;
-                left: 0;
-            }
-  
+	<title>麦teaの部屋</title>
 
-            .fade{
-                opacity: 0;
-                animation: fade 4s ease;
-            }
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
 
-            .max_window p{
-                font-size: 100px;
-                font-weight: bold;
-            }
+		@media screen and (min-width: 0px) {
+			.head{
+				font-weight: bolder;
+				font-family: '游ゴシック';
+				font-size: 25px;
+				color: #333333;
+			}
+		}
 
-            @keyframes fade{
-                0%{ opacity: 0; transform: translateY(50px); }
-                50%{ opacity: 1; transform: translateY(0px); }
-                70%{ opacity: 1; }
-                100%{ opacity: 0; }
-            }
+		@media screen and (min-width: 600px) {
+			.head{
+				font-weight: bolder;
+				font-family: '游ゴシック';
+				font-size: 40px;
+				color: #333333;
+			}
+		}
+		
+	</style>
 
-            .max_window{
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                height: 100vh;
-                width: 100vw;
-            }
+	<script>
 
-            .topics{
-                position: absolute;
-                align-items: center;
-                justify-content: center;
-                top: 0;
-                width: 100vw;
-                height: 100vh;
-                animation: anim 4.5s ease;
-            }
+	</script>
+</head>
 
-            .title{
-                font-family: 'OCRB';
-            }
+<body>
 
-            .tmp{
-                font-family: 'OCRB';
-                display: flex;
-                position: absolute;
-                align-items: center;
-                justify-content: center;
-                top: 0;
-                width: 100vw;
-                height: 100vh;
-            }
+	<!--
+	<div class="firstview">
+		<video class="firstview__video" src="first_movie2.mp4" autoplay loop muted>
+		</video>
+	</div>
+-->
+	<div class="pickup">
+		<div class="pickup__head">
+			<p class="head">制作物</p>
+		</div>
 
-            .topic{
-                background-color: black;
-                margin: 5px 40px 5px 40px;
-                width: 300px;
-                height: 450px;
-                border: #ffffff solid 1px;
-                text-align: center;
-                transition: .5s;
-            }
+		<div class="pickup__contents">
+			<div class="pickup__content">
+				<a class="pickup__unity" href="unity/unity.html">
+					<img class="pickup__img" src="img/unity/17-1.gif" alt="BOUNDS">
+					<div class="pickup__texts">
+						<span class="pickup__text pickup__text--title">Unity</span>
+						<span class="pickup__text pickup__text--desc">Unityで作ったもの一覧です。</span>
+					</div>
+				</a>
+			</div>
+		
+			<div class="pickup__content">
+				<a class="pickup__unity" href="blender/blender.html">
+					<img class="pickup__img" src="img/blender/2.png" alt="USB">
+					<div class="pickup__texts">
+						<span class="pickup__text pickup__text--title">Blender</span>
+						<span class="pickup__text pickup__text--desc">Blenderで作ったもの一覧です。</span>
+					</div>
+				</a>
+			</div>
+		</div>
+		
+	</div>
 
-            .tmp:hover > .topic{
-                transform: scale(0.9);
-            }
+	
+	<div class="update">
+		<div class="update__head">
+			<p class="head">News</p>
+		</div>
 
-            .tmp > .topic:hover{
-                transform: scale(1.1);
-            }
+		<div class="update__lists">
 
-            .topic:hover{
-                background-color: white;
-                color: black;
-            }
+			<div class="update__underline"></div>
 
+			<div class="update__content">
+				<div class="update__type_and_date">
+					<div class="update__type update__type--notice">
+						<p class="update__text update__text--notice">お知らせ</p>
+					</div>
 
-            @keyframes anim{
-                0%{ transform: scale(0); }
-                80%{ transform: scale(0); }
-                100%{ transform: scale(1); }
-            }
-
-            .topics > .title p{
-                margin: 20px 0 0 0;
-                text-align: center;
-                font-size: 50px;
-                font-weight: bolder;
-            }
-
-            .topic p{
-                font-size: 25px;
-                font-weight: bolder;
-            }
-
-            .topic button{
-                border: none;
-                cursor: pointer;
-                width: 250px;
-                height: 70px;
-                font-weight: bold;
-                font-size: 30px;
-            }
-
-            .center{
-                text-align: center;
-            }
-
-            .topics{
-                visibility: hidden;
-            }
-
-            .topic,.title{
-                visibility: visible;
-            }
-
-            button{
-                font-family: 'Terminal';
-            }
-
-            #twitter{
-                border: solid white 1px;
-                color: white;
-                background-color: #00a6ce;
-                transition: .5s;
-            }
-
-            #twitter:hover{
-                border:solid #00a6ce 1px;
-                background-color: white;
-                color: #00a6ce;
-            }
-
-            #unityroom{
-                border: solid white 1px;
-                color: white;
-                background-color: #4632ff;
-                transition: .5s;
-            }
-
-            #unityroom:hover{
-                border:solid #4632ff 1px;
-                background-color: white;
-                color: #4632ff;
-            }
-
-            #github{
-                border:solid #e7e7e7 1px;
-                color: #e7e7e7;
-                background-color: black;
-                transition: .5s;
-            }
-
-            #github:hover{
-                border:solid black 1px;
-                color: black;
-                background-color: white;
-            }
-
-            #blog{
-                border: solid white 1px;
-                color: white;
-                background-color: #f78850;
-                transition: .5s;
-            }
-            #blog:hover{
-                border:solid #f78850 1px;
-                color: #f78850;
-                background-color: white;
-            }
-
-            #unity{
-                border: solid white 1px;
-                color: white;
-                background-color: #0e1015;
-                transition: .5s;
-            }
-
-            #unity:hover{
-                border:solid #0e1015 1px;
-                color: #0e1015;
-                background-color: white;
-            }
-
-            #blender{
-                border: solid white 1px;
-                color: white;
-                background-color: orange;
-                transition: .5s;
-            }
-
-            #blender:hover{
-                border:solid orange 1px;
-                color: orange;
-                background-color: white;
-            }
-
-        </style>
-
-        <script>
-            window.onload= function() {
-                    var particles = Particles.init({
-                        selector: '.background',
-                        sizeVariations: 10,
-                        color: ['#00bbdd', '#404B69', '#DBEDF3'],
-                        connectParticles: true
-                    });
-            }
-        </script>
-    </head>
-
-    <body>
-        <canvas class="background"></canvas>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
-
-        <div class="max_window">
-            <p class="fade">ようこそ</p>
-        </div>
-
-        <div class="topics">
-            <div class="title">
-                    <p>トピック</p>
-            </div>
-
-            <div class="tmp">
-                <div class="topic">
-                    <p>更新履歴</p>
-                    <p>2020/03/01<br>Unityの制作物のページを更新しました。</p>
-                    <p>2019/10/22<br>Unityの制作物のページを更新しました。</p>
-                    <p>2019/09/07<br>ページを作製</p>
-                </div>
-    
-                <div class="topic">
-                    <p>制作物</p>
-                    <p><button type="button" id="unity" onclick="window.open('pastproject_files/pastproject.html')">Unity</button></p>
-                    <p><button type="button" id="blender" onclick="alert('まだ作っていません...')">Blender</button></p>
-                </div>
-    
-                <div class="topic">
-                    <div class="center">
-                        <p>外部リンク</p>
-                        <p><button type="button" id="twitter" onclick="window.open('https://twitter.com/tea59595959')"><i class="fab fa-twitter"></i> Twitter</button></p>
-                        <p><button type="button" id="unityroom" onclick="window.open('https://unityroom.com/users/wkny6ejh5l3qgbdu810c')"><i class="fas fa-gamepad"></i> Unityroom</button></p>
-                        <p><button type="button" id="github" onclick="window.open('https://github.com/mugitea7')"><i class="fab fa-github"></i> Github</button></p>
-                        <p><button type="button" id="blog" onclick="window.open('https://mugitea.hatenablog.jp/')"><i class="fas fa-book"></i> Hatena Blog</button></p>
-                    </div>
+					<div class="update__date">
+						<p class="update__text update__text--date">2020/03/10</p>
+					</div>
 				</div>
+
+				<div class="update__body">
+					<p class="update__text update__text--body">ページを置き換えました。</p>
+				</div>
+			</div>
+			<div class="update__underline"></div>
+
+			<div class="update__content">
+				<div class="update__type_and_date">
+					<div class="update__type update__type--notice">
+						<p class="update__text update__text--notice">お知らせ</p>
+					</div>
+
+					<div class="update__date">
+						<p class="update__text update__text--date">2020/03/10</p>
+					</div>
+				</div>
+
+				<div class="update__body">
+					<p class="update__text update__text--body">blenderの制作物のページを作成しました。</p>
+				</div>
+			</div>
+			<div class="update__underline"></div>
+
+			<div class="update__content">
+				<div class="update__type_and_date">
+					<div class="update__type update__type--notice">
+						<p class="update__text update__text--notice">お知らせ</p>
+					</div>
+
+					<div class="update__date">
+						<p class="update__text update__text--date">2020/03/10</p>
+					</div>
+				</div>
+
+				<div class="update__body">
+					<p class="update__text update__text--body">unityの制作物のページを一新しました。</p>
+				</div>
+			</div>
+			<div class="update__underline"></div>
+
+			<div class="update__content">
+				<div class="update__type_and_date">
+					<div class="update__type update__type--notice">
+						<p class="update__text update__text--notice">お知らせ</p>
+					</div>
+
+					<div class="update__date">
+						<p class="update__text update__text--date">2020/03/10</p>
+					</div>
+				</div>
+
+				<div class="update__body">
+					<p class="update__text update__text--body">スマホに対応させています。</p>
+				</div>
+			</div>
+			<div class="update__underline"></div>
+
+			<div class="update__content">
+				<div class="update__type_and_date">
+					<div class="update__type update__type--notice">
+						<p class="update__text update__text--notice">お知らせ</p>
+					</div>
+
+					<div class="update__date">
+						<p class="update__text update__text--date">2020/03/05</p>
+					</div>
+				</div>
+
+				<div class="update__body">
+					<p class="update__text update__text--body">ページを作り変えています。</p>
+				</div>
+			</div>
+			<div class="update__underline"></div>
+
+			<a class="update__content" href="#">
+				<div class="update__type_and_date">
+					<div class="update__type update__type--unityroom">
+						<p class="update__text update__text--unityroom">Unityroom</p>
+					</div>
 				
-            </div>
-        </div>
-          
-    </body>
+					<div class="update__date">
+						<p class="update__text update__text--date">2020/03/01</p>
+					</div>
+				</div>
+
+				<div class="update__body">
+					<p class="update__text update__text--body">Unityroomにて「BOUNDS」を公開しました。</p>
+				</div>
+			</a>
+			<div class="update__underline"></div>
+
+			<div class="update__content">
+				<div class="update__type_and_date">
+					<div class="update__type update__type--notice">
+						<p class="update__text update__text--notice">お知らせ</p>
+					</div>
+
+					<div class="update__date">
+						<p class="update__text update__text--date">2020/03/01</p>
+					</div>
+				</div>
+
+				<div class="update__body">
+					<p class="update__text update__text--body">Unityの制作物のページを更新しました。</p>
+				</div>
+			</div>
+			<div class="update__underline"></div>
+
+			<div class="update__content">
+				<div class="update__type_and_date">
+					<div class="update__type update__type--notice">
+						<p class="update__text update__text--notice">お知らせ</p>
+					</div>
+
+					<div class="update__date">
+						<p class="update__text update__text--date">2019/10/22</p>
+					</div>
+				</div>
+
+				<div class="update__body">
+					<p class="update__text update__text--body">Unityの制作物のページを更新しました。</p>
+				</div>
+			</div>
+			<div class="update__underline"></div>
+
+			<div class="update__content">
+				<div class="update__type_and_date">
+					<div class="update__type update__type--notice">
+						<p class="update__text update__text--notice">お知らせ</p>
+					</div>
+
+					<div class="update__date">
+						<p class="update__text update__text--date">2019/09/07</p>
+					</div>
+				</div>
+
+				<div class="update__body">
+					<p class="update__text update__text--body">ページを作成</p>
+				</div>
+			</div>
+			<div class="update__underline"></div>
+
+		</div>
+	</div>
+	
+
+	
+	<div class="links">
+		<div class="links__head">
+			<p class="head">外部リンク</p>
+		</div>
+
+		<div class="links__content">
+			
+
+				<p><button type="button" id="twitter" onclick="window.open('https://twitter.com/tea59595959')"><i class="fab fa-twitter"></i> Twitter</button></p>
+				<p><button type="button" id="unityroom" onclick="window.open('https://unityroom.com/users/wkny6ejh5l3qgbdu810c')"><i class="fas fa-gamepad"></i> Unityroom</button></p>
+				<p><button type="button" id="github" onclick="window.open('https://github.com/mugitea7')"><i class="fab fa-github"></i> Github</button></p>
+				<p><button type="button" id="blog" onclick="window.open('https://mugitea.hatenablog.jp/')"><i class="fas fa-book"></i> Hatena Blog</button></p>
+			
+		</div>
+	</div>
+	
+
+<body>
+
 </html>

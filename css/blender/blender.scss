@@ -1,0 +1,159 @@
+$pc: 1024px;    //PC
+$tab: 600px;    //タブレット
+$sp: 0px;     //スマホ
+
+@mixin break($breakpoint){
+    @media screen and (min-width: ($breakpoint)){
+        @content;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.title{
+
+    margin: 50px 0 40px 0;
+    width: 90%;
+    height: auto;
+
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
+    &__text{
+        font-family: '游ゴシック';
+        font-weight: bolder;
+        color: #333333;
+
+        @include break($sp){
+            font-size: 40px;
+        }
+
+        @include break($tab){
+            font-size: 35px;
+        }
+
+        @include break($pc){
+            font-size: 35px;
+        }
+    }
+
+    ::after{
+        position: absolute;
+        content: "";
+        background: orange;
+        width: 100px;
+        height: 3px;
+        left: 0;
+        bottom: 0;
+    }
+
+    ::before{
+        position: absolute;
+        content: "";
+        background: gray;
+        width: 100%;
+        height: 3px;
+        left: 0;
+        bottom: 0;
+    }
+}
+
+.contents{
+    width: 90%;
+    height: auto;
+
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
+    margin: 10px 0px 10px 0px;
+    display: flex;
+    flex-wrap: wrap;
+
+    &__content{
+        
+        overflow: hidden;
+        position: relative;
+
+        @include break($sp){
+            width: 300px;
+            height: 500px;
+            margin: 0 0 40px 0;
+        }
+
+        @include break($tab){
+            width: 250px;
+            height: 450px;
+            margin: 0 34px 40px 0;
+        }
+
+        @include break($pc){
+            width: 250px;
+            height: 450px;
+            margin: 0 34px 40px 0;
+        }        
+    }
+
+    &__img{
+        width: 100%;
+        overflow: hidden;
+    }
+
+    &__text{
+        height: 100%;
+        margin: 10px 10px 0 10px;
+    }
+
+    &__deco{
+        position: relative;
+
+        ::before{
+            position: absolute;
+            left: -10px;
+
+            border-radius: 10px;
+            background: orange;
+            content: "";
+            width: 5px;
+            height: 100%;
+        }
+    }
+
+    &__title{
+        position: relative;
+        margin: 0 0 10px 10px;
+        font-size: 20px;
+        font-family: '游ゴシック';
+        font-weight: bolder;
+        color: #333333;
+    }
+
+    &__desc{
+        font-size: normal;
+        font-family: '游ゴシック';
+        color: #333333;
+    }
+
+    &__date{
+        position: absolute;
+        font-size: normal;
+        bottom: 0;
+        font-family: '游ゴシック';
+        font-weight: bolder;
+        color: #333333;
+    }
+
+    &__bottom{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        height: 1px;
+        background-color: #888888;
+        bottom: 0;
+    }
+}
