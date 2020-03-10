@@ -11,6 +11,7 @@ $sp: 0px;     //スマホ
 * {
     margin: 0;
     padding: 0;
+    font-family: Verdana, Roboto, "Droid Sans", "游ゴシック", YuGothic, "メイリオ", Meiryo, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "ＭＳ Ｐゴシック", sans-serif;
 }
 
 .title{
@@ -24,7 +25,6 @@ $sp: 0px;     //スマホ
     transform: translateX(-50%);
 
     &__text{
-        font-family: '游ゴシック';
         font-weight: bolder;
         color: #333333;
 
@@ -127,22 +127,18 @@ $sp: 0px;     //スマホ
         position: relative;
         margin: 0 0 10px 10px;
         font-size: 20px;
-        font-family: '游ゴシック';
         font-weight: bolder;
         color: #333333;
     }
 
     &__desc{
         font-size: normal;
-        font-family: '游ゴシック';
         color: #333333;
     }
 
     &__date{
         position: absolute;
         font-size: normal;
-        bottom: 0;
-        font-family: '游ゴシック';
         font-weight: bolder;
         color: #333333;
     }
