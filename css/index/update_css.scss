@@ -2,6 +2,11 @@ $pc: 1024px;    //PC
 $tab: 600px;    //タブレット
 $sp: 0px;     //スマホ
 
+$color_notice: #DD3333;
+$color_unityroom: rgb(51, 91, 221);
+$color_blender: orange;
+$color_unity: #666666;
+
 @mixin break($breakpoint){
     @media (min-width: ($breakpoint)){
         @content;
@@ -134,11 +139,19 @@ $sp: 0px;     //スマホ
         }
 
         &--notice{
-            background-color: #DD3333;
+            background-color: $color_notice;
         }
 
         &--unityroom{
-            background-color: rgb(51, 91, 221);
+            background-color: $color_unityroom;
+        }
+
+        &--blender{
+            background-color: $color_blender;
+        }
+
+        &--unity{
+            background-color: $color_unity;
         }
     }
 
@@ -208,6 +221,16 @@ $sp: 0px;     //スマホ
         }
 
         &--unityroom{
+            color: white;
+            font-weight: normal;
+        }
+
+        &--blender{
+            color: white;
+            font-weight: normal;
+        }
+
+        &--unity{
             color: white;
             font-weight: normal;
         }

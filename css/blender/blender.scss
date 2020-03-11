@@ -2,6 +2,8 @@ $pc: 1024px;    //PC
 $tab: 600px;    //タブレット
 $sp: 0px;     //スマホ
 
+$color: orange;
+
 @mixin break($breakpoint){
     @media screen and (min-width: ($breakpoint)){
         @content;
@@ -44,7 +46,7 @@ $sp: 0px;     //スマホ
     ::after{
         position: absolute;
         content: "";
-        background: orange;
+        background: $color;
         width: 100px;
         height: 3px;
         left: 0;
@@ -116,7 +118,7 @@ $sp: 0px;     //スマホ
             left: -10px;
 
             border-radius: 10px;
-            background: orange;
+            background: $color;
             content: "";
             width: 5px;
             height: 100%;

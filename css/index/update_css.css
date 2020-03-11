@@ -156,6 +156,14 @@
   background-color: #335bdd;
 }
 
+.update__type--blender {
+  background-color: orange;
+}
+
+.update__type--unity {
+  background-color: #666666;
+}
+
 .update__date {
   position: relative;
   margin: 0 60 0 30;
@@ -245,6 +253,16 @@
 }
 
 .update__text--unityroom {
+  color: white;
+  font-weight: normal;
+}
+
+.update__text--blender {
+  color: white;
+  font-weight: normal;
+}
+
+.update__text--unity {
   color: white;
   font-weight: normal;
 }
