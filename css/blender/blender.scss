@@ -100,9 +100,17 @@ $color: orange;
         }        
     }
 
+    &__covimg{
+        height: 60%;
+    }
+
     &__img{
+        position: relative;
         width: 100%;
         overflow: hidden;
+        top: 50%;
+        transform: translateY(-50%);
+        
     }
 
     &__text{

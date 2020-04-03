@@ -102,9 +102,17 @@
   }
 }
 
+.contents__covimg {
+  height: 60%;
+}
+
 .contents__img {
+  position: relative;
   width: 100%;
   overflow: hidden;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .contents__text {

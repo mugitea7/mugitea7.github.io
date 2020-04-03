@@ -102,21 +102,23 @@ $sp: 0px;     //スマホ
         }
     }
 
+    &__covimg{
+        width: 100%;
+        height: 70%;
+    }
+
     &__img{
         display: block; 
-        position: absolute;
-        top: 0;
+        position: relative;
+        top: 50%;
         left: 50%;
-        transform: translateX(-50%);
+        transform: translate(-50%,-50%);
         width: 100%;
         height: auto;
     }
 
     &__text{
-        font-weight: bolder;
-    }
-    
-        
+        font-weight: bolder;    
 
         &--title{
             position: absolute;
