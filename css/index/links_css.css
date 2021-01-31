@@ -148,6 +148,20 @@
   background-color: white;
 }
 
+#note {
+  border: solid #3ec7a9 1px;
+  color: white;
+  background-color: #3ec7a9;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+#note:hover {
+  border: solid #3ec7a9 1px;
+  color: #3ec7a9;
+  background-color: white;
+}
+
 #unity {
   border: solid #0e1015 1px;
   color: white;

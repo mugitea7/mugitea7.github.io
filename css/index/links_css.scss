@@ -137,6 +137,19 @@ $sp: 0px;     //スマホ
     }
 }
 
+#note{
+    border: solid #3ec7a9 1px;
+    color: white;
+    background-color: #3ec7a9;
+    transition: .5s;
+
+    &:hover{
+        border:solid #3ec7a9 1px;
+        color: #3ec7a9;
+        background-color: white;
+    }
+}
+
 #unity{
     border: solid #0e1015 1px;
     color: white;
