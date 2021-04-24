@@ -1,0 +1,221 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "游ゴシック", YuGothic, "メイリオ", Meiryo, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "ＭＳ Ｐゴシック", sans-serif;
+}
+
+.title {
+  margin: 50px 0 40px 0;
+  width: 90%;
+  height: auto;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.title__text {
+  font-weight: bolder;
+  color: #333333;
+}
+
+@media screen and (min-width: 0px) {
+  .title__text {
+    font-size: 40px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .title__text {
+    font-size: 35px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .title__text {
+    font-size: 35px;
+  }
+}
+
+.title ::after {
+  position: absolute;
+  content: "";
+  background: orange;
+  width: 100px;
+  height: 3px;
+  left: 0;
+  bottom: 0;
+}
+
+.title ::before {
+  position: absolute;
+  content: "";
+  background: gray;
+  width: 100%;
+  height: 3px;
+  left: 0;
+  bottom: 0;
+}
+
+.contents {
+  width: 90%;
+  height: auto;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  margin: 10px 0px 10px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.contents__content {
+  overflow: hidden;
+  position: relative;
+}
+
+@media screen and (min-width: 0px) {
+  .contents__content {
+    width: 300px;
+    height: 500px;
+    margin: 0 0 40px 0;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .contents__content {
+    width: 250px;
+    height: 500px;
+    margin: 0 34px 40px 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .contents__content {
+    width: 250px;
+    height: 500px;
+    margin: 0 34px 40px 0;
+  }
+}
+
+.contents__covimg {
+  height: 60%;
+}
+
+.contents__img {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.contents__text {
+  height: 100%;
+  margin: 10px 10px 0 10px;
+}
+
+.contents__deco {
+  position: relative;
+}
+
+.contents__deco ::before {
+  position: absolute;
+  left: -10px;
+  border-radius: 10px;
+  background: orange;
+  content: "";
+  width: 5px;
+  height: 100%;
+}
+
+.contents__title {
+  position: relative;
+  margin: 0 0 10px 10px;
+  font-size: 20px;
+  font-weight: bolder;
+  color: #333333;
+}
+
+.contents__desc {
+  font-size: normal;
+  color: #333333;
+}
+
+.contents__date {
+  position: absolute;
+  font-size: normal;
+  bottom: 0;
+  font-weight: bolder;
+  color: #333333;
+}
+
+.contents__bottom {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 90%;
+  height: 1px;
+  background-color: #888888;
+  bottom: 0;
+}
+
+.contents__badge {
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 80%;
+  height: 80%;
+}
+
+.footer {
+  margin: 50px 0 40px 0;
+  width: 90%;
+  height: auto;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.footer__top {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 100%;
+  height: 1px;
+  background-color: #888888;
+  top: 0;
+}
+
+.footer__text {
+  font-weight: bolder;
+  color: #333333;
+}
+
+@media screen and (min-width: 0px) {
+  .footer__text {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .footer__text {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .footer__text {
+    font-size: 20px;
+  }
+}
+/*# sourceMappingURL=googlePlayStore.css.map */

@@ -175,4 +175,18 @@
   color: #0e1015;
   background-color: white;
 }
+
+#googlePlay {
+  border: solid #69a5ff 1px;
+  color: white;
+  background-color: #69a5ff;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+#googlePlay:hover {
+  border: solid #69a5ff 1px;
+  color: #69a5ff;
+  background-color: white;
+}
 /*# sourceMappingURL=links_css.css.map */

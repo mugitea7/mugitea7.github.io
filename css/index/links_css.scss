@@ -162,3 +162,16 @@ $sp: 0px;     //スマホ
         background-color: white;
     }
 }
+
+#googlePlay{
+    border: solid #69a5ff 1px;
+    color: white;
+    background-color: #69a5ff;
+    transition: .5s;
+
+    &:hover{
+        border:solid #69a5ff 1px;
+        color: #69a5ff;
+        background-color: white;
+    }
+}
