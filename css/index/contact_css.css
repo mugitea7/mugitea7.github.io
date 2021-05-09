@@ -1,0 +1,105 @@
+.contacts {
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 90%;
+  margin: 0 0 100 0;
+}
+
+.contacts__head {
+  position: relative;
+}
+
+.contacts__head ::before {
+  position: absolute;
+  content: "";
+  background: #888888;
+  width: 100%;
+  height: 3px;
+  bottom: -3;
+}
+
+.contacts__head ::after {
+  position: absolute;
+  content: "";
+  background: red;
+  width: 200px;
+  height: 3px;
+  bottom: -3;
+  left: 0;
+}
+
+.contacts__content {
+  position: relative;
+  margin: 20 0 0 0;
+}
+
+.contacts__content button {
+  width: 150;
+  height: 75;
+  margin: 10;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 0px) {
+  .contacts__content button {
+    width: 140;
+    height: 70;
+    font-size: large;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .contacts__content button {
+    width: 150;
+    height: 75;
+    font-size: large;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .contacts__content button {
+    width: 150;
+    height: 75;
+    font-size: large;
+  }
+}
+
+.contacts__content p {
+  font-weight: bolder;
+  margin: 10;
+}
+
+@media screen and (min-width: 0px) {
+  .contacts__content p {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .contacts__content p {
+    font-size: 17px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .contacts__content p {
+    font-size: 17px;
+  }
+}
+
+#twitter {
+  border: solid #00a6ce 1px;
+  color: white;
+  background-color: #00a6ce;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+#twitter:hover {
+  border: solid #00a6ce 1px;
+  background-color: white;
+  color: #00a6ce;
+}
+/*# sourceMappingURL=contact_css.css.map */

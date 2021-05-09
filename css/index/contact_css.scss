@@ -1,0 +1,103 @@
+$pc: 1024px;    //PC
+$tab: 600px;    //タブレット
+$sp: 0px;     //スマホ
+
+@mixin break($breakpoint){
+    @media screen and (min-width: ($breakpoint)){
+        @content;
+    }
+}
+
+.contacts{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 90%;
+    margin: 0 0 100 0;
+
+    &__head{
+        position: relative;
+
+        ::before{
+            position: absolute;
+            content: "";
+            background: #888888;
+            width: 100%;
+            height: 3px;
+            bottom: -3;	
+        }
+        
+        ::after{
+            position: absolute;
+            content: "";
+            background: red;
+            width: 200px;
+            height: 3px;
+            bottom: -3;
+            left: 0;
+        }
+    }
+
+    &__content{
+        position: relative;
+        margin: 20 0 0 0;
+
+        button{
+            
+            width: 150;
+            height: 75;
+            margin: 10;
+
+            cursor: pointer;
+
+            @include break($sp){
+                width: 140;
+                height: 70;
+                font-size: large;
+            }
+    
+            @include break($tab){
+                width: 150;
+                height: 75;
+                font-size: large;
+            }  
+    
+            @include break($pc){
+                width: 150;
+                height: 75;
+                font-size: large;
+            }
+        }
+
+        p{
+            font-weight: bolder; 
+            margin: 10;
+
+            @include break($sp){
+                font-size: 14px;
+            }
+
+            @include break($tab){
+                font-size: 17px;
+            }
+
+            @include break($pc){
+                font-size: 17px;
+            }
+        }
+    }
+}
+
+#twitter{
+    border: solid #00a6ce 1px;
+    color: white;
+    background-color: #00a6ce;
+    transition: .5s;
+
+    &:hover{
+        border:solid #00a6ce 1px;
+        background-color: white;
+        color: #00a6ce;
+    }
+}
